@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;500;600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+}
+
+.menu-wrapper{
+  box-shadow: 0 4px 6px 0 rgba(12, 0, 46, .08);
+}
+
+button.toggle-btn {
+  outline: none;
+  border: 0;
+  background: transparent;
+  font-size: 27px;
+}
+
+nav.mainmenu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav.mainmenu ul li a {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  color: #222222;
+  line-height: 65px;
+}
+
+.mainmenu ul li a:hover{
+  color: #2E3192;
+}
+
+nav.mainmenu ul li{
+  position: relative;
+}
+
+.mainmenu ul li:focus-within > ul,
+.mainmenu ul li:hover > ul{
+  display: initial;
+  top: 100%;
+  opacity: 1;
+  visibility: visible;
+}
+
+.has-dropdown:after {
+  content: "\f0dd";
+  position: absolute;
+  top: 33%;
+  right: 0;
+  font-family: 'FontAwesome';
+}
+
+.mainmenu ul li ul {
+  position: absolute;
+  top: calc(100% + 15px);
+  left: 0;
+  min-width: 200px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+  opacity: 0;
+  visibility: hidden;
+}
+li.has-dropdown ul li a {
+  line-height: 100%;
+  padding: 15px;
+}
+
+li.has-dropdown ul li {
+  display: block;
+  text-align: left;
+  border-top: 1px solid #ddd;
+}
+
+div#sideNav .mainmenu ul li a {
+  line-height: 100%;
+  font-size: 14px;
+  padding: 13px 3px;
+}
+
+div#sideNav .mainmenu ul{
+  margin: 0;
+  padding: 0
+}
+
+div#sideNav .mainmenu ul{
+  margin: 30px 0px;
+}
+
+/* Multi Level Dropdown */
+.mainmenu ul li ul li ul{
+  left: 200px;
+  top: 0!important;
+}
+
+.mainmenu ul li ul li ul{
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+/* Side Nav */
+
+#sideNav {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  transition: .5s;
+}
+
+div#sideNav nav {
+  background: white;
+  width: 250px;
+  padding: 10px;
+  height: 100vh;
+}
+
+div#sideNav nav img {
+  width: 140px;
+}
+
+button#closeNav {
+  background: #2E3192;
+  border: none;
+  color: #fff;
+  width: 24px;
+  height: 24px;
+  line-height: 14px;
+  border-radius: 50%;
+}
+
+
+.mobile-navItem {
+  margin: 40px 0px;
+  padding: 0;
+}
+
+ul.mobile-navItem li a {
+  font-size: 12px;
+  padding: 7px 0px;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+ul.mobile-navItem li {
+  border-bottom: 1px dotted #ddd;
+}
+
+ul.mobile-navItem li a{
+  position: relative;
+  display: block;
+}
+
+ul.mobile-navItem li:last-child{
+  border-bottom: none;
+}
+
+ul.mobile-navItem li a::after{
+  position: absolute;
+  content: "\f105";
+  font-family: 'FontAwesome';
+  right: 0;
+}
+
